@@ -1,0 +1,302 @@
+/* for p's   #495057 */
+
+/* GENERAL SETTINGS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: #f08c00;
+  line-height: 1;
+  border-top: #fab005 solid 8px;
+}
+
+h1 {
+  font-size: 3rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+h1,
+h2,
+h3,
+a:link {
+  font-family: "Cormorant Garamond", serif;
+}
+
+h1,
+h2,
+h3 {
+  font-style: italic;
+}
+
+p {
+  font-family: "Wix Madefor Display", sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  color: #343a40;
+  margin: 30px 0;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 10px;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+a:link,
+a:visited {
+  color: #fab005;
+  text-decoration: none;
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+a:hover,
+a:active {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #e67700;
+}
+
+hr {
+  margin: 10px 120px;
+  border-color: #fab005;
+}
+
+/* BIG COMPONENTS */
+main {
+  margin: 80px auto;
+  max-width: 1000px;
+}
+
+/* SECTIONS */
+
+.first-sect {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  /* margin: 0 600px 30px 100px; */
+  /* MARGIN: TOP RIGHT BOTTOM LEFT */
+}
+
+.title {
+  font-weight: 700;
+  font-size: 5rem;
+}
+
+.second-sect {
+  display: flex;
+  margin-top: 50px;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.title2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+/* --- CAROUSEL SECTION --- */
+
+.car-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #c0eb75; */
+}
+
+.deeper-container-car {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+
+.title-car {
+  font-size: 4rem;
+  text-decoration: underline;
+}
+
+.car {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+
+  max-width: 900px;
+  padding: 15px 0 15px 75px;
+  position: relative;
+  border-radius: 10px;
+}
+
+.car-img {
+  transform: scale(1.4);
+  border-radius: 10px;
+}
+
+.p-car {
+  margin: 0 40px;
+  color: #212529;
+  font-weight: 400;
+}
+
+/* HIDDEN PART */
+
+.hidden {
+  display: none;
+}
+
+/* BUTTONS */
+
+.btn {
+  height: 40px;
+  width: 40px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+
+  box-shadow: 0 0 8px black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-icon {
+  height: 24px;
+  width: 24px;
+  stroke: #000000;
+}
+
+.btn-right {
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+.btn-left {
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+/* INDIVIDUAL CARS */
+.bolo-p {
+  background-color: #f03e3e;
+}
+.type-p {
+  background-color: #fcc419;
+}
+.alf-p {
+  background-color: #ffde5b;
+}
+
+.bolo-car {
+  background-color: #ff6b6b;
+}
+.type-pas-car {
+  background-color: #ffe066;
+}
+.alf-car {
+  background-color: #ffeea1;
+}
+
+/* --- GRID CONTAINER --- */
+
+.grid-cont-img {
+  height: 100vh;
+
+  display: flex;
+  place-content: center;
+
+  background-image: linear-gradient(
+      rgba(228, 228, 228, 0),
+      rgba(115, 115, 115, 0.614)
+    ),
+    url(../img/grid/background.jpg);
+  background-size: cover;
+}
+
+.grid-fixed {
+  display: flex;
+  align-items: center;
+}
+
+.grid-cont {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  grid-template-rows: 200px 200px;
+  align-items: center;
+  gap: 50px;
+}
+
+.grid-1 {
+  grid-column: 2 / -1;
+}
+
+.grid-title {
+  font-weight: 700;
+  font-size: 40px;
+  letter-spacing: -1px;
+  line-height: 1.2;
+  margin: 0;
+  padding: 20px;
+
+  text-transform: uppercase;
+  text-shadow: 5px 5px 9px rgba(0, 0, 0, 0.894);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.696);
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.201);
+}
+
+.grid-text {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+.cheesy-g {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+/* IMGS */
+.raw-pasta {
+  display: flex;
+  align-items: center;
+}
+
+img {
+  height: 30rem;
+}
+
+.grid-img {
+  width: 300px;
+  height: 200px;
+}
+
+.grid-img:hover {
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.615);
+  transform: translateY(-8px) translateX(-8px) scale(1.05);
+  transition: all 0.5s;
+  cursor: pointer;
+}
