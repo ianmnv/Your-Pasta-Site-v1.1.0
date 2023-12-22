@@ -115,25 +115,22 @@ main {
 
 /* --- CAROUSEL SECTION --- */
 
-.car-container {
+.car-block {
   height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  /* background-color: #c0eb75; */
-}
-
-.deeper-container-car {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   gap: 80px;
 }
 
-.title-car {
+.carousel-title {
   font-size: 4rem;
   text-decoration: underline;
+}
+
+.carousel-container {
+  position: relative;
 }
 
 .car {
@@ -143,7 +140,6 @@ main {
 
   max-width: 900px;
   padding: 15px 0 15px 75px;
-  position: relative;
   border-radius: 10px;
 }
 
@@ -164,7 +160,7 @@ main {
   display: none;
 }
 
-/* BUTTONS */
+/* CAROUSEL BUTTONS */
 
 .btn {
   height: 40px;
