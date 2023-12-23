@@ -2,6 +2,44 @@
 
 // CAROUSEL
 
+// Elements selection
+const btns = document.querySelectorAll(".btn");
+const btnRight = document.querySelector(".btn-right");
+const btnLeft = document.querySelector(".btn-left");
+
+const boloCar = document.querySelector(".bolo-car");
+const pastaCar = document.querySelector(".pasta-car");
+const alfCar = document.querySelector(".alf-car");
+
+const allCarousels = document.querySelectorAll(".car"); // Nodelist (array)
+
+btnRight.addEventListener("click", () => {
+  if (!pastaCar.classList.contains("hidden")) {
+    pastaCar.classList.add("hidden");
+    alfCar.classList.remove("hidden");
+  } else if (!alfCar.classList.contains("hidden")) {
+    alfCar.classList.add("hidden");
+    boloCar.classList.remove("hidden");
+  } else if (!boloCar.classList.contains("hidden")) {
+    boloCar.classList.add("hidden");
+    pastaCar.classList.remove("hidden");
+  }
+});
+
+btnLeft.addEventListener("click", () => {
+  if (!pastaCar.classList.contains("hidden")) {
+    pastaCar.classList.add("hidden");
+    boloCar.classList.remove("hidden");
+  } else if (!boloCar.classList.contains("hidden")) {
+    boloCar.classList.add("hidden");
+    alfCar.classList.remove("hidden");
+  } else if (!alfCar.classList.contains("hidden")) {
+    alfCar.classList.add("hidden");
+    pastaCar.classList.remove("hidden");
+  }
+});
+/*
+
 // function to switch car components
 const switchCars = function (firstCar, secondCar) {
   firstCar.classList.add("hidden");
@@ -9,7 +47,6 @@ const switchCars = function (firstCar, secondCar) {
 };
 
 // Bolognese element
-const boloCar = document.querySelector(".bolo-car");
 const btnRBol = document.querySelector(".btn-r-bol");
 const btnLBol = document.querySelector(".btn-l-bol");
 
@@ -64,5 +101,7 @@ btnLAl.addEventListener("click", () => {
 
   switchCars(alfCar, difTypeCar);
 });
+
+*/
 
 //  END OF CAROUSEL
