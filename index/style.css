@@ -15,6 +15,7 @@ body {
   color: #f08c00;
   line-height: 1;
   border-top: #fab005 solid 8px;
+  font-family: "Wix Madefor Display", sans-serif;
 }
 
 h1 {
@@ -38,7 +39,6 @@ h3 {
 }
 
 p {
-  font-family: "Wix Madefor Display", sans-serif;
   font-size: 1.8rem;
   line-height: 1.5;
   letter-spacing: 0.5px;
@@ -59,16 +59,16 @@ nav {
   gap: 20px;
 }
 
-a:link,
-a:visited {
+.nav-links:link,
+.nav-links:visited {
   color: #fab005;
   text-decoration: none;
   font-size: 2.4rem;
   font-weight: 500;
 }
 
-a:hover,
-a:active {
+.nav-links:hover,
+.nav-links:active {
   font-size: 2.4rem;
   font-weight: 700;
   color: #e67700;
@@ -102,9 +102,8 @@ main {
 
 .second-sect {
   display: flex;
-  margin-top: 50px;
+  margin-top: 5rem;
   align-items: center;
-  justify-content: center;
   gap: 25px;
 }
 
@@ -118,14 +117,16 @@ main {
 .car-block {
   height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 80px;
+
+  position: relative;
 }
 
 .carousel-title {
-  font-size: 4rem;
+  position: absolute;
+  top: 8rem;
+  font-size: 5rem;
   text-decoration: underline;
 }
 
@@ -140,12 +141,7 @@ main {
 
   max-width: 900px;
   padding: 15px 0 15px 75px;
-  border-radius: 10px;
-}
-
-.car-img {
-  transform: scale(1.4);
-  border-radius: 10px;
+  border-radius: 1rem;
 }
 
 .p-car {
@@ -218,11 +214,12 @@ main {
 
 /* --- GRID CONTAINER --- */
 
-.grid-cont-img {
+.grid-block {
   height: 100vh;
 
   display: flex;
   place-content: center;
+  align-items: center;
 
   background-image: linear-gradient(
       rgba(228, 228, 228, 0),
@@ -230,44 +227,67 @@ main {
     ),
     url(../img/grid/background.jpg);
   background-size: cover;
+
+  position: relative;
 }
 
-.grid-fixed {
-  display: flex;
-  align-items: center;
-}
-
-.grid-cont {
+.grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 300px);
-  grid-template-rows: 200px 200px;
+  grid-template-columns: repeat(3, 30rem);
+  grid-template-rows: repeat(2, 25rem);
   align-items: center;
-  gap: 50px;
+  gap: 5rem;
 }
 
-.grid-1 {
-  grid-column: 2 / -1;
+.grid-items {
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.295);
+  border-radius: 1rem;
+}
+
+.grid-items:hover {
+  box-shadow: -2px 4px 4rem rgba(0, 0, 0, 0.9);
+  /* transform: translateY(-8px) translateX(-8px) scale(1.05); */
+  transform: scale(1.05);
+  transition: all 0.5s;
+  cursor: pointer;
 }
 
 .grid-title {
   font-weight: 700;
-  font-size: 40px;
+  font-size: 4rem;
+
   letter-spacing: -1px;
   line-height: 1.2;
-  margin: 0;
-  padding: 20px;
-
   text-transform: uppercase;
+
+  margin: 0;
+  padding: 2rem;
+
+  border-radius: 1rem;
+
   text-shadow: 5px 5px 9px rgba(0, 0, 0, 0.894);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.696);
+  box-shadow: -2px 4px 35px rgba(0, 0, 0, 0.9);
+
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.201);
+}
+
+.grid-an:link,
+.grid-an:visited {
+  font-family: "Wix Madefor Display", sans-serif;
+  text-decoration: none;
 }
 
 .grid-text {
   margin: 0;
   padding: 0;
   color: #fff;
+  text-align: center;
+}
+
+.grid-1 {
+  grid-column: 2 / -1;
 }
 
 .cheesy-g {
@@ -275,24 +295,65 @@ main {
   grid-row: 1 / 2;
 }
 
-/* IMGS */
-.raw-pasta {
+/* Absolute positioned anchor */
+
+.float-a:link,
+.float-a:visited {
+  color: #000000;
+  font-size: 1.8rem;
+  cursor: pointer;
+  border-radius: 1rem;
+  background-color: #f8f9fa;
+  text-decoration: none;
+  font-family: "Wix Madefor Display", sans-serif;
+
+  position: absolute;
+  bottom: 4%;
+  right: 2%;
+
   display: flex;
   align-items: center;
+  gap: 1rem;
+  padding: 1rem;
 }
 
+.float-a:hover,
+.floar-a:active {
+  background-color: #dee2e6;
+}
+
+.float-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  stroke: #000;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: #d9480f;
+}
+
+.footer-p {
+  margin: 0;
+  padding: 0.5rem;
+  text-align: center;
+  color: #000;
+}
+
+/* IMGS */
 img {
   height: 30rem;
+  border-radius: 1rem;
+}
+
+.car-img {
+  transform: scale(1.4);
 }
 
 .grid-img {
   width: 300px;
   height: 200px;
-}
-
-.grid-img:hover {
-  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.615);
-  transform: translateY(-8px) translateX(-8px) scale(1.05);
-  transition: all 0.5s;
-  cursor: pointer;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
